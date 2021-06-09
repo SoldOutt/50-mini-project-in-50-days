@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.container .card {
+    flex: 0.5;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px;
+    height: 90vh;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+.container .card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    transition: ease-in 0.3s;
+    opacity: 0;
+}
+.container .card.active {
+    flex: 5;
+}
+.container .card.active h3 {
+    opacity: 1;
+}
