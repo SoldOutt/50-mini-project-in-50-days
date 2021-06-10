@@ -59,7 +59,6 @@ ul {
     z-index: -1;
     left: 20px;
     list-style: none;
-    transform: translateX(-100px);
     transition: 0.3s;
 }
 ul li {
