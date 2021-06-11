@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+}
+.input_form {
+    display: flex;
+    position: relative;
+}
+.input_form input {
+    width: 50px;
+    height: 50px;
+    padding: 8px 10px;
+    font-size: 20px;
+}
+.input_form button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input_form button,
+input:focus {
+    outline: none;
+}
+.input_form button,
+input {
+    border: unset;
+    transition: 0.3s;
+}
+.input_form.active input {
+    width: 250px;
+}
+.input_form.active button {
+    left: 240px;
+}
