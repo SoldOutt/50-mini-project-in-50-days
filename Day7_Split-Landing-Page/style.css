@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    width: 100wh;
+}
+.box {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    transition: 0.7s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box h2 {
+    font-size: 50px;
+}
+.box .btn {
+    outline: none;
+    border: 1px solid #000;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.box:hover {
+    flex: 3;
+}
+.btn:hover {
+    background-color: rgba(50, 250, 0, 0.8);
+}
+.box1 {
+    background-image: url('./img/anh1.jpg');
+}
+.box2 {
+    background-image: url('./img/anh3.jpg');
+}
