@@ -3,7 +3,7 @@ var api = 'https://icanhazdadjoke.com/'
 var btn = document.querySelector('.box button')
 var head = {
     headers: {
-        Accecpt: 'application/json',
+        Accept: 'application/json',
         // 'Content-Type': 'application/x-www-form-urlencoded',
     },
 }
