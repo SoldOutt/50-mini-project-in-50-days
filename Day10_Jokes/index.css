@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslateblue;
+}
+.box {
+    width: 40%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box h3 {
+    color: burlywood;
+}
+.box p {
+    color: #000;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.box button {
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: blueviolet;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+}
+.box button:focus {
+    outline: none;
+}
