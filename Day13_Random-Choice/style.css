@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+.container {
+    width: 50%;
+    padding: 20px;
+}
+.container h2 {
+    text-align: center;
+}
+.container textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+}
+.container .choice {
+    display: flex;
+    justify-content: center;
+}
+.container .choice span {
+    margin: 0 15px;
+    padding: 8px 16px;
+    background-color: coral;
+    border-radius: 16px;
+    font-weight: bold;
+}
+.container .choice span.active {
+    background-color: firebrick;
+}
