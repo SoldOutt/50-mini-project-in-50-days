@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    font-family: Roboto Mono;
+}
+.counter {
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.counter i {
+    font-size: 4rem;
+}
+.counter div {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+.counter p {
+    font-size: 1.5rem;
+}
