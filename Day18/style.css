@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: black;
+    --secondary-color: #fff;
+}
+body.dark {
+    --primary-color: #fff;
+    --secondary-color: black;
+}
+body {
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    transition: 0.3s linear;
+}
+.clock_container {
+    width: 300px;
+    height: 300px;
+    /* background-color: #ccc; */
+    position: relative;
+    margin: 40px;
+}
+.clock_container .needle {
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -100%);
+    width: 2px;
+    height: 100px;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform-origin: top center;
+    transition: 0.3s linear;
+}
+.clock_container .needle.second {
+    background-color: red;
+    transform: rotateZ(30deg);
+}
+.clock_container .needle.hour {
+    height: 60px;
+    transform: rotateZ(60deg);
+}
+.clock_container .needle.minute {
+    height: 80;
+    transform: rotateZ(90deg);
+}
+.clock_container .center_point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+.clock_container .center_point::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+button {
+    outline: none;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+.time {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+    transition: 0.3s linear;
+}
+.date {
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: 0.3s linear;
+}
+.date .circle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: bold;
+    transition: 0.3s linear;
+}
