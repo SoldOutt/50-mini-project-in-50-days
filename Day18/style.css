@@ -30,25 +30,26 @@ body {
 .clock_container .needle {
     position: absolute;
     top: 50%;
-    transform: translate(50%, -100%);
+    transform: translate(-50%, -100%) rotate(0deg);
     width: 2px;
     height: 100px;
     background-color: var(--primary-color);
     left: 50%;
-    transform-origin: top center;
+    transform-origin: bottom center;
     transition: 0.3s linear;
 }
 .clock_container .needle.second {
     background-color: red;
-    transform: rotateZ(30deg);
+    transform: translate(-50%, -100%) rotate(30deg);
+    transition: 1s linear;
 }
 .clock_container .needle.hour {
     height: 60px;
-    transform: rotateZ(60deg);
+    transform: translate(-50%, -100%) rotate(60deg);
 }
 .clock_container .needle.minute {
     height: 80;
-    transform: rotateZ(90deg);
+    transform: translate(-50%, -100%) rotate(90deg);
 }
 .clock_container .center_point {
     position: absolute;
