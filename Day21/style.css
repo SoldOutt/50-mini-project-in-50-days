@@ -12,10 +12,6 @@ body {
 .container {
     border: 1px solid rgb(0, 102, 255);
 }
-/* canvas {
-    width: 800px;
-    height: 400px;
-} */
 .tools {
     width: 100%;
     padding: 20px;

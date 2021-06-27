@@ -1,5 +1,10 @@
 var canvas = document.querySelector('#canvas')
-var size = 10
+var sizeEl = document.querySelector('#size')
+var prew = document.querySelector('#prew')
+var plus = document.querySelector('#plus')
+var colorip = document.querySelector('#color')
+var clear = document.querySelector('.clear')
+size = sizeEl.textContent
 var color = 'black'
 var ctx = canvas.getContext('2d')
 var x,
@@ -20,7 +25,6 @@ canvas.addEventListener('mousedown', (e) => {
     x = e.offsetX
     y = e.offsetY
     drawCircle(x, y)
-    console.log(x, y)
 })
 canvas.addEventListener('mouseup', (e) => {
     isPress = false
@@ -32,7 +36,6 @@ function drawCircle(x, y) {
     ctx.arc(x, y, size, 0, Math.PI * 2) // Outer circle
     ctx.fillStyle = color
     ctx.fill() //Vẽ một hình dạng rắn bằng cách lấp đầy vùng nội dung của đường dẫn.
-    ctx.stroke() //vẽ viền
 }
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath()
@@ -42,5 +45,17 @@ function drawLine(x1, y1, x2, y2) {
     ctx.lineWidth = size * 2 //kích thước đường
     ctx.stroke() //vẽ đường
 }
-drawCircle(100, 100)
-drawLine(100, 100, 200, 200)
+plus.addEventListener('click', () => {
+    size++
+    sizeEl.textContent = size
+})
+prew.addEventListener('click', () => {
+    size--
+    sizeEl.textContent = size
+})
+colorip.addEventListener('change', (e) => {
+    color = e.target.value
+})
+clear.addEventListener('click', (e) => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+})
