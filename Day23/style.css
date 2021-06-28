@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(43, 43, 43);
+    color: #fff;
+    padding: 1rem 3rem;
+    align-items: center;
+    position: fixed;
+    transition: 0.3s ease-in;
+}
+.nav .logo {
+    font-size: 30px;
+}
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+.nav ul li {
+    margin-left: 1.5rem;
+}
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    transition: 0.1s ease-in;
+}
+.nav.active {
+    background-color: #fff;
+    padding: 0.7rem 3rem;
+}
+.nav.active .logo {
+    color: #000;
+}
+.nav.active ul li a {
+    color: #000;
+}
+.nav ul li a.active {
+    color: rgb(187, 31, 31);
+}
+.nav ul li a:hover {
+    color: rgb(187, 31, 31);
+}
+.container {
+    background-image: url('./anh5.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container h2 {
+    font-size: 4rem;
+    color: rgb(43, 43, 43);
+    animation: animate 0.5s linear;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.hero .text {
+    margin: 20px 100px;
+}
+.hero .text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
