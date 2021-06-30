@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.container .slide-left {
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 35%;
+    position: absolute;
+    background-color: rgb(187, 64, 64);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    transform: translateY(0%);
+    transition: 0.3s;
+    /* overflow: hidden; */
+    z-index: 1;
+}
+.container .slide-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    height: 100vh;
+    /* position: absolute; */
+    z-index: 1;
+
+    overflow: hidden;
+}
+.container .slide-right {
+    width: 100%;
+    min-height: 100vh;
+    transform: translateY(-300%);
+    transition: 0.3s;
+}
+.slide-img {
+    width: 100%;
+    min-height: 100vh;
+    /* background-image: url(./img/anh1.jpg); */
+    background-position: center center;
+    background-size: cover;
+    transform: translateY(0%);
+    transition: 0.3s;
+    z-index: -1;
+}
+.container .button-up {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+    text-align: center;
+    bottom: 50%;
+    left: 35%;
+    transform: translateX(-100%);
+    z-index: 10;
+}
+.container .button-down {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+    text-align: center;
+    top: 50%;
+    left: 35%;
+    /* transform: translateX(-100%); */
+    z-index: 10;
+}
+.container .button-down:hover,
+.container .button-up:hover {
+    color: #000;
+}
