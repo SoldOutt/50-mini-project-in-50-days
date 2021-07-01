@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin-bottom: 20px;
+}
+h1 span {
+    color: rgb(250, 3, 3);
+}
+.bxImg {
+    width: 50%;
+    position: relative;
+    aspect-ratio: 2/1;
+    background-image: url(./anh4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bxImg img {
+    width: 100%;
+}
+.bxImg i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(250, 3, 3);
+    transform: scale(0);
+    animation: animate 0.4s linear;
+}
+@keyframes animate {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
