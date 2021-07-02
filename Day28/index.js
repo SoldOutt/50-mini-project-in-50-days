@@ -1,17 +1,14 @@
 var inp = document.querySelectorAll('.text p')
 var result = document.querySelector('.result')
-console.log({ inp })
 var texts = []
 inp.forEach(function (x) {
     texts.push(x.textContent)
 })
-console.log(texts)
 // var txt = 'Xin chao cac ban'
 // console.log(txt.length)
 var pos = 1,
     ch = 0
 function chen(a) {
-    console.log(pos)
     if (pos < 0) {
         return
     }
@@ -41,7 +38,6 @@ function sleep(x) {
 }
 async function duyet() {
     for (let i = 0; i < texts.length; i++) {
-        console.log(texts[i].length)
         await chen(texts[i])
         // await sleep(2000)
     }
