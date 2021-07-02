@@ -1,0 +1,32 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result {
+    font-size: 1.5rem;
+    position: relative;
+}
+.text {
+    display: none;
+}
+.result::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 100%;
+    position: absolute;
+    z-index: 1;
+    animation: animate 0.5s infinite;
+}
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
