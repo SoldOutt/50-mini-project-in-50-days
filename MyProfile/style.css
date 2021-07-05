@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --bgColor: #003140;
+    --primary-color: #00abfd;
+    --text-color: #cdf1ff;
+    --secondary-color: #00587c;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    font-family: Roboto;
+    color: var(--text-color);
+}
+
+.container-fluid {
+    height: 30px;
+    background-color: red;
+}
+.nav {
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    background-color: var(--bgColor);
+}
+.nav .my-infor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.my-infor .bx-img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--secondary-color);
+    overflow: hidden;
+    border-radius: 50%;
+}
+.bx-img img {
+    width: 100%;
+    height: 100%;
+}
+.my-infor .contact-me a {
+    font-size: 3rem;
+    margin: 5px;
+}
+.my-infor .contact-me a:hover {
+    color: var(--text-color);
+}
+.nav-menu {
+    margin: 20px;
+}
+.nav-menu ul {
+    list-style: none;
+}
+.nav-menu ul li {
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.nav-menu ul li.active {
+    color: var(--primary-color);
+}
+.nav-menu ul li:hover i {
+    color: var(--primary-color);
+}
+.nav-menu ul li i {
+    margin-right: 5px;
+}
+.main {
+    margin-left: 300px;
+}
