@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>My Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -44,27 +44,32 @@
                 <h2>About</h2>
                 <p>Sinh viên năm 3 tại đại học Công Nghiệp Hà Nội</p>
                 <div class="about-infor">
-                    <div class="bx-img">
-                        <img src="./img/anh2.png" alt="">
-                    </div>
-                    <div class="resume">
-                        <h3></h3>
-                        <ul>
-                            <li><i class="fas fa-chevron-right"></i><span> Birthday: </span>14-04-2001</li>
-                            <li><i class="fas fa-chevron-right"></i><span> Phone: </span>0346663207</li>
-                            <li><i class="fas fa-chevron-right"></i><span> Email: </span>boychauphong2001@gmail.com</li>
-                            <li><i class="fas fa-chevron-right"></i><span> Addres: </span>Liên Hà, Đông Anh, Hà Nội</li>
-                        </ul>
+                    <div class="row">
+
+                        <div class="bx-img col-lg-6 col-sm-12 animation animation-to-right" data-type="to-right">
+                            <img src="./img/anh2.png" alt="">
+                        </div>
+                        <div class="resume col-lg-6 col-sm-12 animation animation-to-left" data-type="to-left">
+                            <h3></h3>
+                            <ul>
+                                <li><i class="fas fa-chevron-right"></i><span> Birthday: </span>14-04-2001</li>
+                                <li><i class="fas fa-chevron-right"></i><span> Phone: </span>0346663207</li>
+                                <li><i class="fas fa-chevron-right"></i><span> Email: </span>boychauphong2001@gmail.com
+                                </li>
+                                <li><i class="fas fa-chevron-right"></i><span> Addres: </span>Liên Hà, Đông Anh, Hà Nội
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="education infor">
                 <h2>Education</h2>
                 <p>Sinh viên năm 3 tại đại học Công Nghiệp Hà Nội</p>
-                <div class="edu-exp">
-                    <div class="education-item">
+                <div class="edu-exp row">
+                    <div class="education-item col-lg-6 col-sm-12">
                         <h3>Education</h3>
-                        <div class="item">
+                        <div class="item animation animation-up" data-type="to-up">
                             <span>2016-2019</span>
                             <i>Đang học cấp 3</i>
                             <ul>
@@ -73,7 +78,16 @@
                                 <li><span>Nhận xét: </span>Năng động, hòa đồng, nói chung là tuyệt với :D </li>
                             </ul>
                         </div>
-                        <div class="item">
+                        <div class="item animation animation-up" data-type="to-up">
+                            <span>2019-2023</span>
+                            <i>Đang học Đại học</i>
+                            <ul>
+                                <li><span>Xếp loại: </span>Xuất sắc</li>
+                                <li><span>Chuyên Ngành: </span>Công Nghệ Thông Tin</li>
+                                <li><span>Nhận xét: </span>Năng động, hòa đồng, nói chung là tuyệt với :D </li>
+                            </ul>
+                        </div>
+                        <div class="item animation animation-up" data-type="to-up">
                             <span>2019-2023</span>
                             <i>Đang học Đại học</i>
                             <ul>
@@ -83,9 +97,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item col-lg-6 col-sm-12">
                         <h3>Education</h3>
-                        <div class="item">
+                        <div class="item animation animation-up" data-type="to-up">
                             <span>2016-2019</span>
                             <i>Đang học cấp 3</i>
                             <ul>
@@ -94,7 +108,7 @@
                                 <li><span>Nhận xét: </span>Năng động, hòa đồng, nói chung là tuyệt với :D </li>
                             </ul>
                         </div>
-                        <div class="item">
+                        <div class="item animation animation-up" data-type="to-up">
                             <span>2019-2023</span>
                             <i>Đang học Đại học</i>
                             <ul>
@@ -102,6 +116,53 @@
                                 <li><span>Chuyên Ngành: </span>Công Nghệ Thông Tin</li>
                                 <li><span>Nhận xét: </span>Năng động, hòa đồng, nói chung là tuyệt với :D </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills infor">
+                <h2>Skill</h2>
+                <div class="row">
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='150'>
+                        <i class="far fa-clock"></i>
+                        <div class="skill-des">
+                            <h4>Quản lí thời gian</h4>
+                            <p>Quản lý thời gian làm việc hiệu quả</p>
+                        </div>
+                    </div>
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='300'>
+                        <div class="skill-icon"><i class="far fa-users"></i></div>
+                        <div class="skill-des">
+                            <h4>Kĩ năng làm việc nhóm</h4>
+                            <p>Khá là ok. Đặc biệt khi làm việc nhóm với nữ :v</p>
+                        </div>
+                    </div>
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='450'>
+                        <div class="skill-icon"><i class="far fa-comments"></i></div>
+                        <div class="skill-des">
+                            <h4>Khả năng giao tiếp</h4>
+                            <p>Giao tiếp tốt , hòa đồng với mọi người</p>
+                        </div>
+                    </div>
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='600'>
+                        <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="skill-des">
+                            <h4>Tư duy phân tích</h4>
+                            <p>Ổn</p>
+                        </div>
+                    </div>
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='750'>
+                        <div class="skill-icon"><i class="far fa-check"></i></div>
+                        <div class="skill-des">
+                            <h4>Quản lí thời gian</h4>
+                            <p>Quản lý thời gian làm việc hiệu quả</p>
+                        </div>
+                    </div>
+                    <div class="skill col-lg-4 col-md-6 animation animation-up" data-type='to-up' data-delay='900'>
+                        <div class="skill-icon"><i class="far fa-tasks"></i></div>
+                        <div class="skill-des">
+                            <h4>Quản lí thời gian</h4>
+                            <p>Quản lý thời gian làm việc hiệu quả</p>
                         </div>
                     </div>
                 </div>
@@ -110,6 +171,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

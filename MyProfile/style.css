@@ -14,14 +14,28 @@ body {
     min-height: 100vh;
     font-family: Roboto;
     /* color: var(--text-color); */
+    overflow-x: hidden;
 }
-
+.animation {
+    transition: 1s;
+    opacity: 0;
+}
+.animation-to-right {
+    left: -100%;
+}
+.animation-to-left {
+    right: -100%;
+}
+.animation-up {
+    transform: translateY(50px);
+}
 .nav {
     position: fixed;
     height: 100vh;
     width: 300px;
     background-color: var(--bgColor);
     color: var(--text-color);
+    z-index: 100;
 }
 .nav .my-infor {
     display: flex;
@@ -93,10 +107,14 @@ body {
 .infor {
     padding: 30px 10px;
 }
+.main .infor:nth-child(2n + 1) {
+    background-color: var(--text-color);
+}
 .infor h2 {
     color: var(--bgColor);
     position: relative;
     width: max-content;
+    margin-bottom: 30px;
 }
 .infor h2::after {
     width: 50%;
@@ -115,10 +133,10 @@ body {
     display: flex;
 }
 .about .about-infor .bx-img {
-    width: 400px;
+    /* width: 400px; */
 }
 .about-infor .resume {
-    margin-left: 20px;
+    height: 100%;
 }
 .about-infor .resume ul {
     list-style: none;
@@ -133,12 +151,6 @@ body {
     font-weight: 600;
     color: var(--bgColor);
 }
-.education .edu-exp {
-    display: flex;
-}
-.education .edu-exp .education-item {
-    flex: 1;
-}
 .education .edu-exp .education-item .item {
     position: relative;
     padding: 10px 30px;
@@ -152,6 +164,9 @@ body {
     height: 10px;
     border: 2px solid var(--bgColor);
     border-radius: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-color);
+    z-index: 10;
 }
 .education .edu-exp .education-item .item::after {
     content: '';
@@ -161,4 +176,41 @@ body {
     height: 100%;
     width: 2px;
     background-color: var(--bgColor);
+    transform: translateX(-50%);
+}
+.education .edu-exp .education-item .item > span {
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.skills .skill {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.skill i {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    transition: 0.5s linear;
+}
+.skill .skill-des {
+    display: flow-root;
+}
+.skill .skill-des h4 {
+    font-size: 2rem;
+}
+.skill:hover i {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
 }
