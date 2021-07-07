@@ -6,20 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- CSS only -->
     <title>My Profile</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <div class="nav">
         <div class="my-infor">
             <div class="bx-img">
-                <img src="./img/avatar.jpg" alt="">
+                <img src="./img/avatar.jpg" alt="ảnh đại diện">
             </div>
             <h3>Nguyễn Văn Nam</h3>
             <div class="contact-me">
@@ -29,14 +32,22 @@
         </div>
         <div class="nav-menu">
             <ul>
-                <li class="active"><i class="fal fa-user"></i>About Me</li>
-                <li><i class="fas fa-chart-area"></i>Charts</li>
-                <li><i class="fal fa-table"></i>Tabel</li>
+                <li class="active" data-link='about'><i class="fal fa-user"></i>About Me</li>
+                <li data-link='charts'><i class="fas fa-chart-area"></i>Charts</li>
+                <li data-link='tables'><i class="fal fa-table"></i>Tabels</li>
+                <li><i class="fal fa-tv"></i>User Interfaces
+                    <ul class="nav-menu__child">
+                        <li data-link='buttons'><i class="far fa-dot-circle"></i>Buttons</li>
+                        <li data-link='cards'><i class="far fa-credit-card"></i>Cards</li>
+                        <li data-link='navigations'><i class="fad fa-th-list"></i>Navigation</li>
+                    </ul>
+                </li>
+                <li data-link='tables'><i class="fal fa-table"></i>Tabels</li>
             </ul>
         </div>
     </div>
     <div class="main">
-        <div class="container-fluid">
+        <div id="about" class="container-fluid active">
             <div class="head">
                 <h1>Xin chào các bạn</h1>
             </div>
@@ -168,10 +179,260 @@
                 </div>
             </div>
         </div>
+        <div id="tables" class="container-fluid">
+            <div class="header">
+                <div class="header-search">
+                    <button><i class="far fa-search"></i></button>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header-github">
+                    <button><i class="fab fa-github-alt"></i> View on Github</button>
+                </div>
+                <div class="nav-profile">
+                    <div class="notification"><i class="far fa-bell"></i></div>
+                    <div class="dropdown ">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./img/avatar.jpg" alt="">
+                            Nguyễn Văn Nam
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui-contain m-5">
+                <h2>Some table with bootstrap</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Basic Example</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>User Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Table hover</h3>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>User Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Table Striped</h3>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>User Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Table Bordererd</h3>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>User Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buttons" class="container-fluid">
+            <div class="header">
+                <div class="header-search">
+                    <button><i class="far fa-search"></i></button>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header-github">
+                    <button><i class="fab fa-github-alt"></i> View on Github</button>
+                </div>
+                <div class="nav-profile">
+                    <div class="notification"><i class="far fa-bell"></i></div>
+                    <div class="dropdown ">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./img/avatar.jpg" alt="">
+                            Nguyễn Văn Nam
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui-contain m-5">
+                <h2>Buttons</h2>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Basic buttons</h3>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                            <button type="button" class="btn btn-success">Success</button>
+                            <button type="button" class="btn btn-danger">Danger</button>
+                            <button type="button" class="btn btn-warning">Warning</button>
+                            <button type="button" class="btn btn-info">Info</button>
+                            <button type="button" class="btn btn-light">Light</button>
+                            <button type="button" class="btn btn-dark">Dark</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Outline buttons</h3>
+                            <button type="button" class="btn btn-outline-primary">Primary</button>
+                            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                            <button type="button" class="btn btn-outline-success">Success</button>
+                            <button type="button" class="btn btn-outline-danger">Danger</button>
+                            <button type="button" class="btn btn-outline-warning">Warning</button>
+                            <button type="button" class="btn btn-outline-info">Info</button>
+                            <button type="button" class="btn btn-outline-light">Light</button>
+                            <button type="button" class="btn btn-outline-dark">Dark</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Effect hover buttons</h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+
+                        <div class="ui-item p-3">
+                            <h3>Effect click buttons</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
