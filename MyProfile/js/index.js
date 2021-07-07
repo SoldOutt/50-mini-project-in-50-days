@@ -6,10 +6,10 @@ components.forEach((x) => {
         if (x.querySelector('.nav-menu__child')) {
             x.querySelector('.nav-menu__child').classList.toggle('active')
         }
-        console.log(component)
         if (!component) {
             return
         }
+        console.log(component)
         var componentActive = document.querySelector('.nav-menu ul li.active')
         componentActive.classList.remove('active')
         x.classList.add('active')
