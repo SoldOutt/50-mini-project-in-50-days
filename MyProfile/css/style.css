@@ -125,9 +125,16 @@ body {
     background-size: cover;
     height: 100vh;
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
+}
+#typed {
+    font-size: 2rem;
+}
+.typed-cursor {
+    font-size: 2rem;
 }
 .head h1 {
     color: var(--bgColor);
@@ -275,7 +282,7 @@ body {
     font-size: 1rem;
     font-weight: 500;
 }
-.header .header-github button {
+.header .header-github a {
     background-color: transparent;
     outline: none;
     border: 1px solid var(--secondary-color);

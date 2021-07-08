@@ -57,3 +57,13 @@ var inputSearch = document.querySelector('.header .header-search input')
 btnSearch.addEventListener('click', function () {
     inputSearch.classList.toggle('active')
 })
+
+//Type js
+
+var typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 200,
+    loop: true,
+    loopCount: Infinity,
+    backSpeed: 100,
+})
