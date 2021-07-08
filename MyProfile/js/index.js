@@ -1,3 +1,4 @@
+// import Typed from 'typed.js'
 var animationItems = document.querySelectorAll('.animation')
 var components = document.querySelectorAll('.nav-menu ul li')
 components.forEach((x) => {
@@ -32,9 +33,9 @@ window.addEventListener('scroll', (e) => {
             x.style.opacity = 1
             var type = x.getAttribute('data-type')
             if (type == 'to-right') {
-                x.style.left = 0 + '%'
+                x.style.transform = 'translateX(0%)'
             } else if (type == 'to-left') {
-                x.style.right = 0 + '%'
+                x.style.transform = 'translateX(0%)'
             } else if (type == 'to-up') {
                 x.style.transform = 'translateY(0px)'
             }

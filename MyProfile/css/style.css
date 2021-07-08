@@ -29,10 +29,10 @@ body {
     opacity: 0;
 }
 .animation-to-right {
-    left: -100%;
+    transform: translateX(-100%);
 }
 .animation-to-left {
-    right: -100%;
+    transform: translateX(100%);
 }
 .animation-up {
     transform: translateY(50px);
