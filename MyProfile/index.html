@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
@@ -33,7 +34,7 @@
         <div class="nav-menu">
             <ul>
                 <li class="active" data-link='about'><i class="fal fa-user"></i>About Me</li>
-                <li data-link='charts'><i class="fas fa-chart-area"></i>Charts</li>
+                <li data-link='charts' data-link='charts'><i class="fas fa-chart-area"></i>Charts</li>
                 <li data-link='tables'><i class="fal fa-table"></i>Tabels</li>
                 <li><i class="fal fa-tv"></i>User Interfaces
                     <ul class="nav-menu__child">
@@ -436,6 +437,53 @@
                 </div>
             </div>
         </div>
+        <div id="charts" class="container-fluid">
+            <div class="header">
+                <div class="header-search">
+                    <button><i class="far fa-search"></i></button>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="header-github">
+                    <a class="btn" href="https://github.com/SoldOutt"><i class="fab fa-github-alt"></i> View on
+                        Github</a>
+                </div>
+                <div class="nav-profile">
+                    <div class="notification"><i class="far fa-bell"></i></div>
+                    <div class="dropdown ">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="./img/avatar.jpg" alt="">
+                            Nguyễn Văn Nam
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ui-contain m-5">
+                <h2>Charts</h2>
+                <i>Nó mà hiển thị lỗi ae ngồi chờ tí tại chưa load xong thư viện đấy</i>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Line Chart</h3>
+                            <div id="first-chart" style="height: 250px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="ui-item p-3">
+                            <h3>Area Chart</h3>
+                            <div id="second-chart" style="height: 250px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -447,7 +495,14 @@
     <!-- Type.js- Hiệu ứng đánh máy -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+    <!-- Thư viện morris.js giúp vẽ biểu đồ  -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.0/morris.min.js"></script>
+    <!-- <script src="./js/morris.js-0.5.1/morris.min.js"></script> -->
 
+    <script src="./js/charts.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
